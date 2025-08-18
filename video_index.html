@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAN Video Comparison</title>
+    <style>
+        :root {
+            --gap: 22px;
+            --card-w: 340px;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            background: #fafafa;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            color: #111;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 32px auto;
+            padding: 0 20px;
+        }
+        
+        h2 {
+            margin: 0 0 16px 0;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: var(--gap) var(--gap);
+        }
+        
+        th, td {
+            border: 0;
+            padding: 0;
+            vertical-align: top;
+            text-align: center;
+        }
+        
+        th {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            padding: 10px 4px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .02em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #eee;
+            z-index: 1;
+        }
+        
+        td.prompt {
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.35;
+            max-width: 420px;
+        }
+        
+        .card {
+            width: var(--card-w);
+            aspect-ratio: 16/9;
+            background: #101114;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.05);
+            margin: 0 auto;
+        }
+        
+        .card.missing {
+            width: var(--card-w);
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            background: #fff;
+            border: 1px dashed #ddd;
+            border-radius: 12px;
+            margin: 0 auto;
+        }
+        
+        video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>WAN Video Comparison (Local files)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Prompt</th><th>wan 2.2 5b fast (480p)</th><th>wan 2.2 5b fast (720p)</th><th>wan 2.2 t2v fast (480p)</th><th>wan 2.2 t2v fast (720p)</th>
+                </tr>
+            </thead>
+            <tbody><tr><td class="prompt">An influencer speaks about a new shampoo product to the camera</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_01.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_01.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_01.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_01.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">A red sports car drifts through neon-lit Tokyo streets at night, rain-slick asphalt, cinematic slow motion</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_02.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_02.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_02.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_02.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">A barista preparing coffee in a cozy cafe, pouring a latte art.</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_03.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_03.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_03.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_03.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">A man takes a tense phone call bathed in dark neon green light — shadows flicker across his worried face</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_04.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_04.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_04.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_04.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">A chef flames a wok in a bustling kitchen, sparks and steam, dynamic close-up macro shots</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_05.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_05.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_05.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_05.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">A dog is riding on a skateboard down a hill</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_06.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_06.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_06.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_06.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">A man and a woman have an engaging conversation</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_07.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_07.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_07.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_07.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">A woman in a red trench coat is running frantically in the rain, she is visibly confused and upset</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_08.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_08.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_08.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_08.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">A mountain biker descends a forest trail at golden hour, handheld action camera feel</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_09.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_09.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_09.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_09.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">A train emerges from a tunnel into a snowy landscape as steam billows from it</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_10.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_10.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_10.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_10.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">An elderly man feeding pigeons on a quiet bench in the city square.</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_11.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_11.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_11.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_11.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">A surfer rides a big turquoise wave, follow-cam from water level, sunlight glinting</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_12.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_12.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_12.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_12.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">A cat does a backflip off a diving board at the Olympics</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_13.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_13.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_13.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_13.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">With lightning speed, a cheetah darts through the golden savannah, its powerful limbs pounding the earth, sending up trails of dust as it races toward its prey.</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_14.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_14.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_14.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_14.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">People dancing during an Indian Holi festival, throwing colorful powders in the air.</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_15.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_15.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_15.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_720p/video_15.mp4" type="video/mp4"></video></div></td></tr><tr><td class="prompt">A futuristic motorcycle speeds through a cyberpunk alley, holograms flicker, dynamic chase energy</td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_480p/video_16.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_5b_720p/video_16.mp4" type="video/mp4"></video></div></td><td><div class="card"><video controls autoplay muted loop playsinline preload="metadata"><source src="wan_t2v_480p/video_16.mp4" type="video/mp4"></video></div></td><td><div class="card missing">No Video</div></td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
