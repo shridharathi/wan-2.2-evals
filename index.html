@@ -7,51 +7,23 @@
     <style>
         @font-face {
             font-family: 'Neue Freigeist';
-            src: url('./neue-freigeist/RBFreigeistNeue-Regular.woff2') format('woff2'),
-                 url('./neue-freigeist/RBFreigeistNeue-Regular.woff') format('woff');
+            src: url('video_outputs/neue-freigeist/RBFreigeistNeue-SemiBold.woff2') format('woff2'),
+                 url('video_outputs/neue-freigeist/RBFreigeistNeue-SemiBold.woff') format('woff');
             font-weight: 400;
             font-style: normal;
         }
         
-        @font-face {
-            font-family: 'Neue Freigeist';
-            src: url('./neue-freigeist/RBFreigeistNeue-SemiBold.woff2') format('woff2'),
-                 url('./neue-freigeist/RBFreigeistNeue-SemiBold.woff') format('woff');
-            font-weight: 600;
-            font-style: normal;
-        }
-        
-        @font-face {
-            font-family: 'Neue Freigeist';
-            src: url('./neue-freigeist/RBFreigeistNeue-Bold.woff2') format('woff2'),
-                 url('./neue-freigeist/RBFreigeistNeue-Bold.woff') format('woff');
-            font-weight: 700;
-            font-style: normal;
-        }
+
         
         @font-face {
             font-family: 'Basier Square';
-            src: url('./basier-square/basiersquare-regular-webfont.woff2') format('woff2'),
-                 url('./basier-square/basiersquare-regular-webfont.woff') format('woff');
+            src: url('video_outputs/basier-square/basiersquare-regular-webfont.woff2') format('woff2'),
+                 url('video_outputs/basier-square/basiersquare-regular-webfont.woff') format('woff');
             font-weight: 400;
             font-style: normal;
         }
         
-        @font-face {
-            font-family: 'Basier Square';
-            src: url('./basier-square/basiersquare-medium-webfont.woff2') format('woff2'),
-                 url('./basier-square/basiersquare-medium-webfont.woff') format('woff');
-            font-weight: 500;
-            font-style: normal;
-        }
-        
-        @font-face {
-            font-family: 'Basier Square';
-            src: url('./basier-square/basiersquare-semibold-webfont.woff2') format('woff2'),
-                 url('./basier-square/basiersquare-semibold-webfont.woff') format('woff');
-            font-weight: 600;
-            font-style: normal;
-        }
+
         
         * {
             box-sizing: border-box;
@@ -65,7 +37,7 @@
         }
         
         .container {
-            max-width: 1600px;
+            max-width: 1700px;
             margin: 0 auto;
         }
         
@@ -89,7 +61,7 @@
         
         .comparison-table th {
             background-color: #f8f9fa;
-            padding: 20px 15px;
+            padding: 25px 20px;
             text-align: center;
             font-weight: 600;
             font-size: 14px;
@@ -103,7 +75,7 @@
         }
         
         .comparison-table td {
-            padding: 15px 10px;
+            padding: 25px 15px;
             border-bottom: 1px solid #e9ecef;
             vertical-align: middle;
         }
@@ -127,13 +99,14 @@
         .video-cell {
             text-align: center;
             width: 320px;
-            padding: 10px 5px;
+            padding: 20px 10px;
         }
         
         .video-container {
             display: inline-block;
             background: #000;
             overflow: hidden;
+            margin: 8px;
         }
         
         .video-element {
@@ -152,6 +125,7 @@
             justify-content: center;
             color: #6c757d;
             font-size: 14px;
+            margin: 8px;
         }
         
         .comparison-table tr:nth-child(even) {
@@ -169,7 +143,11 @@
         <table class="comparison-table">
             <thead>
                 <tr>
-                    <th>Prompt</th><th>wan 2.2 5b fast (480p)</th><th>wan 2.2 5b fast (720p)</th><th>wan 2.2 t2v fast (480p)</th><th>wan 2.2 t2v fast (720p)</th>
+                    <th>Prompt</th>
+                    <th>wan 2.2 5b fast (480p)<br><small>$0.0125, 5s inference</small></th>
+                    <th>wan 2.2 5b fast (720p)<br><small>$0.025, 13s inference</small></th>
+                    <th>wan 2.2 t2v fast (480p)<br><small>$0.05, 34s inference</small></th>
+                    <th>wan 2.2 t2v fast (720p)<br><small>$0.10, 1m 52s inference</small></th>
                 </tr>
             </thead>
             <tbody>
@@ -178,7 +156,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_01.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_01.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -186,7 +164,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_01.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_01.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -194,7 +172,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_01.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_01.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -202,7 +180,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_01.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_01.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -213,7 +191,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_02.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_02.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -221,7 +199,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_02.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_02.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -229,7 +207,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_02.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_02.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -237,18 +215,18 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_02.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_02.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="prompt-cell">A barista preparing coffee in a cozy cafe, pouring a latte carefully.</td>
+                    <td class="prompt-cell">A barista preparing coffee in a cozy cafe, pouring a latte art.</td>
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_03.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_03.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -256,7 +234,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_03.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_03.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -264,7 +242,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_03.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_03.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -272,7 +250,42 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_03.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_03.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="prompt-cell">A man takes a tense phone call bathed in dark neon green light — shadows flicker across his worried face</td>
+                    <td class="video-cell">
+                        <div class="video-container">
+                            <video class="video-element" controls autoplay muted loop preload="metadata">
+                                <source src="video_outputs/wan_5b_480p/video_04.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </td>
+                    <td class="video-cell">
+                        <div class="video-container">
+                            <video class="video-element" controls autoplay muted loop preload="metadata">
+                                <source src="video_outputs/wan_5b_720p/video_04.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </td>
+                    <td class="video-cell">
+                        <div class="video-container">
+                            <video class="video-element" controls autoplay muted loop preload="metadata">
+                                <source src="video_outputs/wan_t2v_480p/video_04.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </td>
+                    <td class="video-cell">
+                        <div class="video-container">
+                            <video class="video-element" controls autoplay muted loop preload="metadata">
+                                <source src="video_outputs/wan_t2v_720p/video_04.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -283,7 +296,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_04.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_05.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -291,7 +304,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_04.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_05.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -299,7 +312,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_04.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_05.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -307,7 +320,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_04.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_05.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -318,7 +331,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_05.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_06.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -326,7 +339,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_05.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_06.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -334,7 +347,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_05.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_06.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -342,7 +355,42 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_05.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_06.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="prompt-cell">A man and a woman have an engaging conversation</td>
+                    <td class="video-cell">
+                        <div class="video-container">
+                            <video class="video-element" controls autoplay muted loop preload="metadata">
+                                <source src="video_outputs/wan_5b_480p/video_07.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </td>
+                    <td class="video-cell">
+                        <div class="video-container">
+                            <video class="video-element" controls autoplay muted loop preload="metadata">
+                                <source src="video_outputs/wan_5b_720p/video_07.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </td>
+                    <td class="video-cell">
+                        <div class="video-container">
+                            <video class="video-element" controls autoplay muted loop preload="metadata">
+                                <source src="video_outputs/wan_t2v_480p/video_07.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </td>
+                    <td class="video-cell">
+                        <div class="video-container">
+                            <video class="video-element" controls autoplay muted loop preload="metadata">
+                                <source src="video_outputs/wan_t2v_720p/video_07.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -353,7 +401,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_06.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_08.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -361,7 +409,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_06.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_08.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -369,7 +417,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_06.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_08.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -377,7 +425,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_06.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_08.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -388,7 +436,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_07.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_09.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -396,7 +444,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_07.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_09.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -404,7 +452,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_07.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_09.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -412,7 +460,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_07.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_09.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -423,7 +471,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_08.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_10.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -431,7 +479,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_08.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_10.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -439,7 +487,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_08.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_10.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -447,7 +495,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_08.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_10.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -458,7 +506,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_09.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_11.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -466,7 +514,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_09.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_11.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -474,7 +522,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_09.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_11.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -482,7 +530,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_09.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_11.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -493,7 +541,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_10.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_12.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -501,7 +549,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_10.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_12.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -509,7 +557,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_10.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_12.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -517,7 +565,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_10.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_12.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -528,7 +576,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_11.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_13.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -536,7 +584,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_11.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_13.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -544,7 +592,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_11.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_13.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -552,18 +600,18 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_11.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_13.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="prompt-cell">A cheetah sprints across savannah grass, ultra slow motion, dust particles suspended in air</td>
+                    <td class="prompt-cell">With lightning speed, a cheetah darts through the golden savannah, its powerful limbs pounding the earth, sending up trails of dust as it races toward its prey.</td>
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_12.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_14.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -571,7 +619,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_12.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_14.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -579,7 +627,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_12.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_14.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -587,7 +635,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_12.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_14.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -598,7 +646,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_13.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_15.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -606,7 +654,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_13.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_15.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -614,7 +662,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_13.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_15.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -622,7 +670,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_13.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_15.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -633,7 +681,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_14.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_480p/video_16.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -641,7 +689,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_14.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_5b_720p/video_16.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -649,7 +697,7 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_14.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_480p/video_16.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -657,49 +705,10 @@
                     <td class="video-cell">
                         <div class="video-container">
                             <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_14.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="prompt-cell">A man jogging in the early morning fog through a park with autumn leaves falling.</td>
-                    <td class="video-cell">
-                        <div class="video-container">
-                            <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_480p/video_15.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </td>
-                    <td class="video-cell">
-                        <div class="video-container">
-                            <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_5b_720p/video_15.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </td>
-                    <td class="video-cell">
-                        <div class="video-container">
-                            <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_480p/video_15.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </td>
-                    <td class="video-cell">
-                        <div class="video-container">
-                            <video class="video-element" controls autoplay muted loop preload="metadata">
-                                <source src="./wan_t2v_720p/video_15.mp4" type="video/mp4">
+                                <source src="video_outputs/wan_t2v_720p/video_16.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                     </td>
                 </tr>
             </tbody>
-        </table>
-    </div>
-</body>
-</html>
